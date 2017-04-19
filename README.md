@@ -5,7 +5,6 @@ Follow the steps:
 
 1 - Download "fixhdmiaudio"
 
-2 - As root move the file to "/lib/systemd/system-sleep/"
-Example:
+2 - As root move the file to "/lib/systemd/system-sleep/". Example:
 
 $ sudo cp fixhdmiaudio /lib/systemd/system-sleep/
