@@ -1,0 +1,16 @@
+
+#! /bin/sh
+
+# Fix Bug 1252423 – HDMI Audio seen as 'unplugged' after Suspend
+#Created by Marcos Silveira and André Berenguel
+# Workaround.
+
+case $1/$2 in
+
+    post/*)
+
+        # Go to VT + 1 and return to current VT
+        CURRENT_VT=$(fgconsole)
+        chvt $((CURRENT_VT + 1)) && chvt $((CURRENT_VT))
+        ;;
+esac
